@@ -11,8 +11,11 @@ public class PTra08_01 {
 
 		// ★ 変数receiveを宣言し、メソッドnumberを実行した結果を代入してください
 
+		int receive = number();
 
 		// ★ 変数receiveを出力してください
+
+		System.out.println(receive);
 
 	}
 
