@@ -6,12 +6,11 @@ public class Car {
 	int gasoline;
 
 	public int run() {
+		int progress;
 		gasoline -= 1;
 
-		if(0 > gasoline) {
-			return -1;
-		}else{
-			return 1 + new java.util.Random().nextInt(15);
+		if(0 < gasoline) {
+
 		}
 	}
 
