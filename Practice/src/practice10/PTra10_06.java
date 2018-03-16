@@ -42,7 +42,7 @@ public class PTra10_06 {
 				int path = cars[i].run();
 				n++;
 				if(path == -1) {
-					System.out.println("目的地に到達できませんでした。");
+					System.out.println(cars[i].color + "の車は目的地に到達できませんでした。");
 					break;
 				}else if(sum < distance){
 					sum += path;
