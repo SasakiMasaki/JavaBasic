@@ -31,8 +31,7 @@ public class PTra13_07 {
 
 		// ★ 作成したItemインスタンスをSuperHeroに持たせてください
 
-		hero.setEqName(konbo.getName());
-		hero.setEqAdditionalDamage(konbo.getAdditonalDamage());
+		hero.setEqipment(konbo);
 
 		/*
 		 * ★ SuperHeroとSlimeを、どちらかが体力０になるまで戦わせます

@@ -51,6 +51,7 @@ public class PTra17_03 {
 					break;
 				} catch(IOException e) {
 					System.out.println("例外が発生しました");
+					continue;
 				} catch(NumberFormatException e) {
 					System.out.println("数字以外が入力されました");
 					continue;

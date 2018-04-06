@@ -6,6 +6,14 @@
  */
 package practice18;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+import practice18.entity.Player;
+
 public class PTra18_03 {
 
 	/*
@@ -20,12 +28,38 @@ public class PTra18_03 {
 		 * ★ ArrayListを作成して、Playerインスタンスを格納してください
 		 */
 
+		ArrayList<Player> player = new ArrayList<Player>();
+
+        try(Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))) {
+            while (scanner.hasNext()) {
+                String[] line = scanner.nextLine().split(",");
+                Player temp = new Player();
+                temp.setPostion(line[0]);
+                temp.setName(line[1]);
+                temp.setCountry(line[2]);
+                temp.setTeam(line[3]);
+                player.add(temp);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("ファイルが見つかりません");
+        }
 
 		// ★ ①のArrayListの中から"レアル・マドリード", "バルセロナ"の選手を除外してください
 
+        Iterator<Player> it = player.iterator();
+
+    	while(it.hasNext()) {
+    		Player p = it.next();
+    		if(p.getTeam().contains("レアル・マドリード") || p.getTeam().contains("バルセロナ")) {
+        		it.remove();
+        	}
+    	}
 
 		// ★ 削除後のArrayListの中身を全件出力してください
 
+    	for(Player players : player) {
+    		System.out.println(players.toString());
+    	}
 
 	}
 }

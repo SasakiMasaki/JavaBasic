@@ -50,9 +50,11 @@ public class PTra04_05 {
 					System.out.println("あいこです。もう一度。");
 				} else if (myHand == 1){
 					System.out.println("あなたの負けです。もう一度。");
-				} else {
+				} else if(myHand == 2){
 					System.out.println("あなたの勝ちです。お疲れさまでした。");
 					winFlg = true;
+				}else {
+					System.out.println("1～3で選んでね。もう一度。");
 				}
 
 
@@ -63,9 +65,11 @@ public class PTra04_05 {
 					System.out.println("あいこです。もう一度。");
 				} else if (myHand == 2){
 					System.out.println("あなたの負けです。もう一度。");
-				} else {
+				} else if(myHand == 0){
 					System.out.println("あなたの勝ちです。お疲れさまでした。");
 					winFlg = true;
+				}else {
+					System.out.println("1～3で選んでね。もう一度。");
 				}
 
 
@@ -76,9 +80,11 @@ public class PTra04_05 {
 					System.out.println("あいこです。もう一度。");
 				} else if (myHand == 0){
 					System.out.println("あなたの負けです。もう一度。");
-				} else {
+				} else if(myHand == 1) {
 					System.out.println("あなたの勝ちです。お疲れさまでした。");
 					winFlg = true;
+				}else {
+					System.out.println("1～3で選んでね。もう一度。");
 				}
 
 

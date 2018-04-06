@@ -46,8 +46,6 @@ public class PTra05_01 {
 			break;
 		default:
 			System.out.println("「正しい数値を入れてください」");
-			break;
-
 		}
 
 	}
